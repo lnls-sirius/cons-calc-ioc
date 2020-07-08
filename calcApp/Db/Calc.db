@@ -33,7 +33,7 @@ record(calc, "$(P):BO_PR_2"){
     field(INPJ, "BO-49U:VA-CCG-BG:Pressure-Mon MSS CP")
 }
     
-record(calc, "$(P):BO_PR"){
+record(calc, "$(P):BO:VA-CCG:Pressure-Mon"){
     field(CALC, "(A+B)/2.")
     field(EGU, "mBar")
 
@@ -134,7 +134,7 @@ record(calc, "$(P):SI_PR_6"){
     field(INPA, "SI-20SB:VA-CCG-BG:Pressure-Mon MSS CP")
 }
 
-record(calc, "$(P):SI_PR"){
+record(calc, "$(P):SI:VA-CCG-BG:Pressure-Mon"){
     field(CALC, "(A+B+C+D+E+F)/6.")
     field(EGU, "mBar")
 
@@ -227,7 +227,7 @@ record(calc, "$(P):FE_PR_6"){
     field(INPB, "SI-20SBFE:VA-CCG-MD:Pressure-Mon MSS CP")
 }
 
-record(calc, "$(P):FE_PR"){
+record(calc, "$(P):FE:VA-CCG:Pressure-Mon"){
     field(CALC, "(A+B+C+D+E+F)/6.")
     field(EGU, "mBar")
 
@@ -240,7 +240,7 @@ record(calc, "$(P):FE_PR"){
 }
               
 # --------------------- TB ----------------------------
-record(calc, "$(P):TB_PR"){
+record(calc, "$(P):TB:VA-CCG:Pressure-Mon"){
     field(CALC, "(A+B)/2.")
     field(EGU, "mBar")
 
@@ -249,7 +249,7 @@ record(calc, "$(P):TB_PR"){
 }
 
 # --------------------- TS ----------------------------
-record(calc, "$(P):TS_PR"){
+record(calc, "$(P):TS:VA-CCG:Pressure-Mon"){
     field(CALC, "(A+B+C+D)/4.")
     field(EGU, "mBar")
 
@@ -259,4 +259,3 @@ record(calc, "$(P):TS_PR"){
     field(INPD, "STS-04:VA-CCG-MD:Pressure-Mon MSS CP")
 }
              
-

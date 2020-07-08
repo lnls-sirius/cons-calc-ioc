@@ -13,7 +13,6 @@ include $(TOP)/configure/CONFIG
 #DB += xxx.db
 
 DB += Calc.db
-DB += Calc.req
 DB += Security.as
 
 #----------------------------------------------------
