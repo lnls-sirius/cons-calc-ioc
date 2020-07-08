@@ -1,648 +1,262 @@
+# -----------------------  Booster ----------------------
+record(calc, "$(P):BO_PR_1"){
+    field(CALC, "(A+B+C+D+E+F+G+H+I+J+K+L)/12.")
+    field(EGU, "mBar")
 
-record(ai, "SI-02SB:RF-P7Cav:Disc1FlwRt-Mon"){
-    field(DESC, "")
-    field(PREC, "4")
-    field(EGU,  "L/h")
-}
-
-record(calc, "SI-02SB:RF-P7Cav:Disc1WdT-Mon"){
-    field(CALC, "B-A")
-    field(INPA, "SI-02SB:RF-P7Cav:WInT-Mon MSS CP")
-    field(INPB, "SI-02SB:RF-P7Cav:Disc1WT-Mon MSS")
-    field(DESC, "")
-    field(PREC, "4")
-    field(EGU,  "C")
-    field(LOLO, "0.3")
-    field(LLSV, "INVALID")
-}
-
-record(calc, "SI-02SB:RF-P7Cav:PwrDissDisc1-Mon"){
-    field(CALC, "1.16*A*B/1000")
-    field(INPA, "SI-02SB:RF-P7Cav:Disc1WdT-Mon MSS CP")   # Disc or cell delta T
-    field(INPB, "SI-02SB:RF-P7Cav:Disc1FlwRt-Mon MSS CP")
-    field(DESC, "")
-    field(PREC, "4")
-    field(EGU,  "kW")
+    field(INPA, "BO-01U:VA-CCG-BG:Pressure-Mon MSS CP")
+    field(INPB, "BO-04U:VA-CCG-BG:Pressure-Mon MSS CP")
+    field(INPC, "BO-05D:VA-CCG-RFC:Pressure-Mon MSS CP")
+    field(INPD, "BO-06U:VA-CCG-ED:Pressure-Mon MSS CP")
+    field(INPE, "BO-09U:VA-CCG-BG:Pressure-Mon MSS CP")
+    field(INPF, "BO-11U:VA-CCG-ED:Pressure-Mon MSS CP")
+    field(INPG, "BO-14U:VA-CCG-BG:Pressure-Mon MSS CP")
+    field(INPH, "BO-16U:VA-CCG-ED:Pressure-Mon MSS CP")
+    field(INPI, "BO-19U:VA-CCG-BG:Pressure-Mon MSS CP")
+    field(INPJ, "BO-21U:VA-CCG-ED:Pressure-Mon MSS CP")
+    field(INPK, "BO-24U:VA-CCG-BG:Pressure-Mon MSS CP")
+    field(INPL, "BO-26U:VA-CCG-ED:Pressure-Mon MSS CP")
 }
 
-record(ai, "SI-02SB:RF-P7Cav:Disc2FlwRt-Mon"){
-    field(DESC, "")
-    field(PREC, "4")
-    field(EGU,  "L/h")
+record(calc, "$(P):BO_PR_2"){
+    field(CALC, "(A+B+C+D+E+F+G+H+I+J)/10.")
+    field(EGU, "mBar")
+
+    field(INPA, "BO-29U:VA-CCG-BG:Pressure-Mon MSS CP")
+    field(INPB, "BO-31U:VA-CCG-ED:Pressure-Mon MSS CP")
+    field(INPC, "BO-34U:VA-CCG-BG:Pressure-Mon MSS CP")
+    field(INPD, "BO-36U:VA-CCG-ED:Pressure-Mon MSS CP")
+    field(INPE, "BO-39U:VA-CCG-BG:Pressure-Mon MSS CP")
+    field(INPF, "BO-41U:VA-CCG-ED:Pressure-Mon MSS CP")
+    field(INPG, "BO-44U:VA-CCG-BG:Pressure-Mon MSS CP")
+    field(INPH, "BO-46U:VA-CCG-ED:Pressure-Mon MSS CP")
+    field(INPI, "BO-47U:VA-CCG-ED:Pressure-Mon MSS CP")
+    field(INPJ, "BO-49U:VA-CCG-BG:Pressure-Mon MSS CP")
+}
+    
+record(calc, "$(P):BO_PR"){
+    field(CALC, "(A+B)/2.")
+    field(EGU, "mBar")
+
+    field(INPA, "$(P):BO_PR_1 CP MSS")
+    field(INPB, "$(P):BO_PR_2 CP MSS")
 }
 
-record(calc, "SI-02SB:RF-P7Cav:Disc2WdT-Mon"){
-    field(CALC, "B-A")
-    field(INPA, "SI-02SB:RF-P7Cav:WInT-Mon MSS CP")
-    field(INPB, "SI-02SB:RF-P7Cav:Disc2WT-Mon MSS")
-    field(DESC, "")
-    field(PREC, "4")
-    field(EGU,  "C")
-    field(LOLO, "0.3")
-    field(LLSV, "INVALID")
+# --------------------- SI ----------------------------
+record(calc, "$(P):SI_PR_1"){
+    field(CALC, "(A+B+C+D+E+F+G+H+I+J+K+L)/12.")
+    field(EGU, "mBar")
+
+    field(INPA, "SI-01C1:VA-CCG-BG:Pressure-Mon MSS CP")
+    field(INPB, "SI-01C3:VA-CCG-BG:Pressure-Mon MSS CP")
+    field(INPC, "SI-01SA:VA-CCG-BG:Pressure-Mon MSS CP")
+    field(INPD, "SI-02C1:VA-CCG-BG:Pressure-Mon MSS CP")
+    field(INPE, "SI-02C3:VA-CCG-BG:Pressure-Mon MSS CP")
+    field(INPF, "SI-02SB:VA-CCG-BG:Pressure-Mon MSS CP")
+    field(INPG, "SI-02SB:VA-CCG-CAV:Pressure-Mon MSS CP")
+    field(INPH, "SI-03C1:VA-CCG-BG:Pressure-Mon MSS CP")
+    field(INPI, "SI-03C3:VA-CCG-BG:Pressure-Mon MSS CP")
+    field(INPJ, "SI-03SP:VA-CCG-BG:Pressure-Mon MSS CP")
+    field(INPK, "SI-04C1:VA-CCG-BG:Pressure-Mon MSS CP")
+    field(INPL, "SI-04C3:VA-CCG-BG:Pressure-Mon MSS CP")
 }
 
-record(calc, "SI-02SB:RF-P7Cav:PwrDissDisc2-Mon"){
-    field(CALC, "1.16*A*B/1000")
-    field(INPA, "SI-02SB:RF-P7Cav:Disc2WdT-Mon MSS CP")   # Disc or cell delta T
-    field(INPB, "SI-02SB:RF-P7Cav:Disc2FlwRt-Mon MSS CP")
-    field(DESC, "")
-    field(PREC, "4")
-    field(EGU,  "kW")
+record(calc, "$(P):SI_PR_2"){
+    field(CALC, "(A+B+C+D+E+F+G+H+I+J+K+L)/12.")
+    field(EGU, "mBar")
+    field(INPA, "SI-04SB:VA-CCG-BG:Pressure-Mon MSS CP")
+    field(INPB, "SI-05C1:VA-CCG-BG:Pressure-Mon MSS CP")
+    field(INPC, "SI-05C3:VA-CCG-BG:Pressure-Mon MSS CP")
+    field(INPD, "SI-05SA:VA-CCG-BG:Pressure-Mon MSS CP")
+    field(INPE, "SI-06C1:VA-CCG-BG:Pressure-Mon MSS CP")
+    field(INPF, "SI-06C3:VA-CCG-BG:Pressure-Mon MSS CP")
+    field(INPG, "SI-06SB:VA-CCG-BG:Pressure-Mon MSS CP")
+    field(INPH, "SI-07C1:VA-CCG-BG:Pressure-Mon MSS CP")
+    field(INPI, "SI-07C3:VA-CCG-BG:Pressure-Mon MSS CP")
+    field(INPJ, "SI-07SP:VA-CCG-BG:Pressure-Mon MSS CP")
+    field(INPK, "SI-08C1:VA-CCG-BG:Pressure-Mon MSS CP")
+    field(INPL, "SI-08C3:VA-CCG-BG:Pressure-Mon MSS CP")
 }
 
-record(ai, "SI-02SB:RF-P7Cav:Disc3FlwRt-Mon"){
-    field(DESC, "")
-    field(PREC, "4")
-    field(EGU,  "L/h")
+record(calc, "$(P):SI_PR_3"){
+    field(CALC, "(A+B+C+D+E+F+G+H+I+J+K+L)/12.")
+    field(EGU, "mBar")
+    field(INPA, "SI-08SB:VA-CCG-BG:Pressure-Mon MSS CP")
+    field(INPB, "SI-09C1:VA-CCG-BG:Pressure-Mon MSS CP")
+    field(INPC, "SI-09C3:VA-CCG-BG:Pressure-Mon MSS CP")
+    field(INPD, "SI-09SA:VA-CCG-BG:Pressure-Mon MSS CP")
+    field(INPE, "SI-10C1:VA-CCG-BG:Pressure-Mon MSS CP")
+    field(INPF, "SI-10C3:VA-CCG-BG:Pressure-Mon MSS CP")
+    field(INPG, "SI-10SB:VA-CCG-BG:Pressure-Mon MSS CP")
+    field(INPH, "SI-11C1:VA-CCG-BG:Pressure-Mon MSS CP")
+    field(INPI, "SI-11C3:VA-CCG-BG:Pressure-Mon MSS CP")
+    field(INPJ, "SI-11SP:VA-CCG-BG:Pressure-Mon MSS CP")
+    field(INPK, "SI-12C1:VA-CCG-BG:Pressure-Mon MSS CP")
+    field(INPL, "SI-12C3:VA-CCG-BG:Pressure-Mon MSS CP")
 }
 
-record(calc, "SI-02SB:RF-P7Cav:Disc3WdT-Mon"){
-    field(CALC, "B-A")
-    field(INPA, "SI-02SB:RF-P7Cav:WInT-Mon MSS CP")
-    field(INPB, "SI-02SB:RF-P7Cav:Disc3WT-Mon MSS")
-    field(DESC, "")
-    field(PREC, "4")
-    field(EGU,  "C")
-    field(LOLO, "0.3")
-    field(LLSV, "INVALID")
+record(calc, "$(P):SI_PR_4"){
+    field(CALC, "(A+B+C+D+E+F+G+H+I+J+K+L)/12.")
+    field(EGU, "mBar")
+    field(INPA, "SI-12SB:VA-CCG-BG:Pressure-Mon MSS CP")
+    field(INPB, "SI-13C1:VA-CCG-BG:Pressure-Mon MSS CP")
+    field(INPC, "SI-13C3:VA-CCG-BG:Pressure-Mon MSS CP")
+    field(INPD, "SI-13SA:VA-CCG-BG:Pressure-Mon MSS CP")
+    field(INPE, "SI-14C1:VA-CCG-BG:Pressure-Mon MSS CP")
+    field(INPF, "SI-14C3:VA-CCG-BG:Pressure-Mon MSS CP")
+    field(INPG, "SI-14SB:VA-CCG-BG:Pressure-Mon MSS CP")
+    field(INPH, "SI-15C1:VA-CCG-BG:Pressure-Mon MSS CP")
+    field(INPI, "SI-15C3:VA-CCG-BG:Pressure-Mon MSS CP")
+    field(INPJ, "SI-15SP:VA-CCG-BG:Pressure-Mon MSS CP")
+    field(INPK, "SI-16C1:VA-CCG-BG:Pressure-Mon MSS CP")
+    field(INPL, "SI-16C3:VA-CCG-BG:Pressure-Mon MSS CP")
 }
 
-record(calc, "SI-02SB:RF-P7Cav:PwrDissDisc3-Mon"){
-    field(CALC, "1.16*A*B/1000")
-    field(INPA, "SI-02SB:RF-P7Cav:Disc3WdT-Mon MSS CP")   # Disc or cell delta T
-    field(INPB, "SI-02SB:RF-P7Cav:Disc3FlwRt-Mon MSS CP")
-    field(DESC, "")
-    field(PREC, "4")
-    field(EGU,  "kW")
+record(calc, "$(P):SI_PR_5"){
+    field(CALC, "(A+B+C+D+E+F+G+H+I+J+K+L)/12.")
+    field(EGU, "mBar")
+    field(INPA, "SI-16SB:VA-CCG-BG:Pressure-Mon MSS CP")
+    field(INPB, "SI-17C1:VA-CCG-BG:Pressure-Mon MSS CP")
+    field(INPC, "SI-17C3:VA-CCG-BG:Pressure-Mon MSS CP")
+    field(INPD, "SI-17SA:VA-CCG-BG:Pressure-Mon MSS CP")
+    field(INPE, "SI-18C1:VA-CCG-BG:Pressure-Mon MSS CP")
+    field(INPF, "SI-18C3:VA-CCG-BG:Pressure-Mon MSS CP")
+    field(INPG, "SI-18SB:VA-CCG-BG:Pressure-Mon MSS CP")
+    field(INPH, "SI-19C1:VA-CCG-BG:Pressure-Mon MSS CP")
+    field(INPI, "SI-19C3:VA-CCG-BG:Pressure-Mon MSS CP")
+    field(INPJ, "SI-19SP:VA-CCG-BG:Pressure-Mon MSS CP")
+    field(INPK, "SI-20C1:VA-CCG-BG:Pressure-Mon MSS CP")
+    field(INPL, "SI-20C3:VA-CCG-BG:Pressure-Mon MSS CP")
 }
 
-record(ai, "SI-02SB:RF-P7Cav:Disc4FlwRt-Mon"){
-    field(DESC, "")
-    field(PREC, "4")
-    field(EGU,  "L/h")
+record(calc, "$(P):SI_PR_6"){
+    field(CALC, "A")
+    field(EGU, "mBar")
+    field(INPA, "SI-20SB:VA-CCG-BG:Pressure-Mon MSS CP")
 }
 
-record(calc, "SI-02SB:RF-P7Cav:Disc4WdT-Mon"){
-    field(CALC, "B-A")
-    field(INPA, "SI-02SB:RF-P7Cav:WInT-Mon MSS CP")
-    field(INPB, "SI-02SB:RF-P7Cav:Disc4WT-Mon MSS")
-    field(DESC, "")
-    field(PREC, "4")
-    field(EGU,  "C")
-    field(LOLO, "0.3")
-    field(LLSV, "INVALID")
+record(calc, "$(P):SI_PR"){
+    field(CALC, "(A+B+C+D+E+F)/6.")
+    field(EGU, "mBar")
+
+    field(INPA, "$(P):SI_PR_1 CP MSS")
+    field(INPB, "$(P):SI_PR_2 CP MSS")
+    field(INPC, "$(P):SI_PR_3 CP MSS")
+    field(INPD, "$(P):SI_PR_4 CP MSS")
+    field(INPE, "$(P):SI_PR_5 CP MSS")
+    field(INPF, "$(P):SI_PR_6 CP MSS")
 }
 
-record(calc, "SI-02SB:RF-P7Cav:PwrDissDisc4-Mon"){
-    field(CALC, "1.16*A*B/1000")
-    field(INPA, "SI-02SB:RF-P7Cav:Disc4WdT-Mon MSS CP")   # Disc or cell delta T
-    field(INPB, "SI-02SB:RF-P7Cav:Disc4FlwRt-Mon MSS CP")
-    field(DESC, "")
-    field(PREC, "4")
-    field(EGU,  "kW")
+# --------------------- FE ----------------------------
+record(calc, "$(P):FE_PR_1"){
+    field(CALC, "(A+B+C+D+E+F+G+H+I+J+K+L)/12.")
+    field(EGU, "mBar")
+
+    field(INPA, "SI-01BCFE:VA-CCG-MD:Pressure-Mon MSS CP")
+    field(INPB, "SI-01C2FE:VA-CCG-MD:Pressure-Mon MSS CP")
+    field(INPC, "SI-01SAFE:VA-CCG-MD:Pressure-Mon MSS CP")
+    field(INPD, "SI-02BCFE:VA-CCG-MD:Pressure-Mon MSS CP")
+    field(INPE, "SI-02SBFE:VA-CCG-MD:Pressure-Mon MSS CP")
+    field(INPF, "SI-03BCFE:VA-CCG-MD:Pressure-Mon MSS CP")
+    field(INPG, "SI-03C2FE:VA-CCG-MD:Pressure-Mon MSS CP")
+    field(INPH, "SI-03SPFE:VA-CCG-MD:Pressure-Mon MSS CP")
+    field(INPI, "SI-04BCFE:VA-CCG-MD:Pressure-Mon MSS CP")
+    field(INPJ, "SI-04SBFE:VA-CCG-MD:Pressure-Mon MSS CP")
+    field(INPK, "SI-05BCFE:VA-CCG-MD:Pressure-Mon MSS CP")
+    field(INPL, "SI-05C2FE:VA-CCG-MD:Pressure-Mon MSS CP")
 }
 
-record(ai, "SI-02SB:RF-P7Cav:Disc5FlwRt-Mon"){
-    field(DESC, "")
-    field(PREC, "4")
-    field(EGU,  "L/h")
+record(calc, "$(P):FE_PR_3"){
+    field(CALC, "(A+B+C+D+E+F+G+H+I+J+K+L)/12.")
+    field(EGU, "mBar")
+
+    field(INPA, "SI-05SAFE:VA-CCG-MD:Pressure-Mon MSS CP")
+    field(INPB, "SI-06BCFE:VA-CCG-MD:Pressure-Mon MSS CP")
+    field(INPC, "SI-06SBFE:VA-CCG-MD:Pressure-Mon MSS CP")
+    field(INPD, "SI-07BCFE:VA-CCG-MD:Pressure-Mon MSS CP")
+    field(INPE, "SI-07C2FE:VA-CCG-MD:Pressure-Mon MSS CP")
+    field(INPF, "SI-07SPFE:VA-CCG-MD:Pressure-Mon MSS CP")
+    field(INPG, "SI-08BCFE:VA-CCG-MD:Pressure-Mon MSS CP")
+    field(INPH, "SI-08SBFE:VA-CCG-MD:Pressure-Mon MSS CP")
+    field(INPI, "SI-09BCFE:VA-CCG-MD:Pressure-Mon MSS CP")
+    field(INPJ, "SI-09C2FE:VA-CCG-MD:Pressure-Mon MSS CP")
+    field(INPK, "SI-09SAFE:VA-CCG-MD:Pressure-Mon MSS CP")
+    field(INPL, "SI-10BCFE:VA-CCG-MD:Pressure-Mon MSS CP")
 }
 
-record(calc, "SI-02SB:RF-P7Cav:Disc5WdT-Mon"){
-    field(CALC, "B-A")
-    field(INPA, "SI-02SB:RF-P7Cav:WInT-Mon MSS CP")
-    field(INPB, "SI-02SB:RF-P7Cav:Disc5WT-Mon MSS")
-    field(DESC, "")
-    field(PREC, "4")
-    field(EGU,  "C")
-    field(LOLO, "0.3")
-    field(LLSV, "INVALID")
+record(calc, "$(P):FE_PR_4"){
+    field(CALC, "(A+B+C+D+E+F+G+H+I+J+K+L)/12.")
+    field(EGU, "mBar")
+
+    field(INPA, "SI-10SBFE:VA-CCG-MD:Pressure-Mon MSS CP")
+    field(INPB, "SI-11BCFE:VA-CCG-MD:Pressure-Mon MSS CP")
+    field(INPC, "SI-11C2FE:VA-CCG-MD:Pressure-Mon MSS CP")
+    field(INPD, "SI-11SPFE:VA-CCG-MD:Pressure-Mon MSS CP")
+    field(INPE, "SI-12BCFE:VA-CCG-MD:Pressure-Mon MSS CP")
+    field(INPF, "SI-12SBFE:VA-CCG-MD:Pressure-Mon MSS CP")
+    field(INPG, "SI-13BCFE:VA-CCG-MD:Pressure-Mon MSS CP")
+    field(INPH, "SI-13C2FE:VA-CCG-MD:Pressure-Mon MSS CP")
+    field(INPI, "SI-13SAFE:VA-CCG-MD:Pressure-Mon MSS CP")
+    field(INPJ, "SI-14BCFE:VA-CCG-MD:Pressure-Mon MSS CP")
+    field(INPK, "SI-14SBFE:VA-CCG-MD:Pressure-Mon MSS CP")
+    field(INPL, "SI-15BCFE:VA-CCG-MD:Pressure-Mon MSS CP")
 }
 
-record(calc, "SI-02SB:RF-P7Cav:PwrDissDisc5-Mon"){
-    field(CALC, "1.16*A*B/1000")
-    field(INPA, "SI-02SB:RF-P7Cav:Disc5WdT-Mon MSS CP")   # Disc or cell delta T
-    field(INPB, "SI-02SB:RF-P7Cav:Disc5FlwRt-Mon MSS CP")
-    field(DESC, "")
-    field(PREC, "4")
-    field(EGU,  "kW")
+record(calc, "$(P):FE_PR_5"){
+    field(CALC, "(A+B+C+D+E+F+G+H+I+J+K+L)/12.")
+    field(EGU, "mBar")
+
+    field(INPA, "SI-15C2FE:VA-CCG-MD:Pressure-Mon MSS CP")
+    field(INPB, "SI-15SPFE:VA-CCG-MD:Pressure-Mon MSS CP")
+    field(INPC, "SI-16BCFE:VA-CCG-MD:Pressure-Mon MSS CP")
+    field(INPD, "SI-16SBFE:VA-CCG-MD:Pressure-Mon MSS CP")
+    field(INPE, "SI-17BCFE:VA-CCG-MD:Pressure-Mon MSS CP")
+    field(INPF, "SI-17C2FE:VA-CCG-MD:Pressure-Mon MSS CP")
+    field(INPG, "SI-17SAFE:VA-CCG-MD:Pressure-Mon MSS CP")
+    field(INPH, "SI-18BCFE:VA-CCG-MD:Pressure-Mon MSS CP")
+    field(INPI, "SI-18SBFE:VA-CCG-MD:Pressure-Mon MSS CP")
+    field(INPJ, "SI-19BCFE:VA-CCG-MD:Pressure-Mon MSS CP")
+    field(INPK, "SI-19C2FE:VA-CCG-MD:Pressure-Mon MSS CP")
+    field(INPL, "SI-19SPFE:VA-CCG-MD:Pressure-Mon MSS CP")
 }
 
-record(ai, "SI-02SB:RF-P7Cav:Disc6FlwRt-Mon"){
-    field(DESC, "")
-    field(PREC, "4")
-    field(EGU,  "L/h")
+record(calc, "$(P):FE_PR_6"){
+    field(CALC, "(A+B)/2.")
+    field(EGU, "mBar")
+
+    field(INPA, "SI-20BCFE:VA-CCG-MD:Pressure-Mon MSS CP")
+    field(INPB, "SI-20SBFE:VA-CCG-MD:Pressure-Mon MSS CP")
 }
 
-record(calc, "SI-02SB:RF-P7Cav:Disc6WdT-Mon"){
-    field(CALC, "B-A")
-    field(INPA, "SI-02SB:RF-P7Cav:WInT-Mon MSS CP")
-    field(INPB, "SI-02SB:RF-P7Cav:Disc6WT-Mon MSS")
-    field(DESC, "")
-    field(PREC, "4")
-    field(EGU,  "C")
-    field(LOLO, "0.3")
-    field(LLSV, "INVALID")
+record(calc, "$(P):FE_PR"){
+    field(CALC, "(A+B+C+D+E+F)/6.")
+    field(EGU, "mBar")
+
+    field(INPA, "$(P):FE_PR_1 CP MSS")
+    field(INPB, "$(P):FE_PR_2 CP MSS")
+    field(INPC, "$(P):FE_PR_3 CP MSS")
+    field(INPD, "$(P):FE_PR_4 CP MSS")
+    field(INPE, "$(P):FE_PR_5 CP MSS")
+    field(INPF, "$(P):FE_PR_6 CP MSS")
+}
+              
+# --------------------- TB ----------------------------
+record(calc, "$(P):TB_PR"){
+    field(CALC, "(A+B)/2.")
+    field(EGU, "mBar")
+
+    field(INPA, "STB-01:VA-CCG-ED:Pressure-Mon MSS CP")
+    field(INPB, "STB-04:VA-CCG-ED:Pressure-Mon MSS CP")
 }
 
-record(calc, "SI-02SB:RF-P7Cav:PwrDissDisc6-Mon"){
-    field(CALC, "1.16*A*B/1000")
-    field(INPA, "SI-02SB:RF-P7Cav:Disc6WdT-Mon MSS CP")   # Disc or cell delta T
-    field(INPB, "SI-02SB:RF-P7Cav:Disc6FlwRt-Mon MSS CP")
-    field(DESC, "")
-    field(PREC, "4")
-    field(EGU,  "kW")
-}
+# --------------------- TS ----------------------------
+record(calc, "$(P):TS_PR"){
+    field(CALC, "(A+B+C+D)/4.")
+    field(EGU, "mBar")
 
-record(ai, "SI-02SB:RF-P7Cav:Disc7FlwRt-Mon"){
-    field(DESC, "")
-    field(PREC, "4")
-    field(EGU,  "L/h")
+    field(INPA, "STS-01:VA-CCG-BG:Pressure-Mon MSS CP")
+    field(INPB, "STS-01:VA-CCG-ED:Pressure-Mon MSS CP")
+    field(INPC, "STS-04:VA-CCG-BG:Pressure-Mon MSS CP")
+    field(INPD, "STS-04:VA-CCG-MD:Pressure-Mon MSS CP")
 }
+             
 
-record(calc, "SI-02SB:RF-P7Cav:Disc7WdT-Mon"){
-    field(CALC, "B-A")
-    field(INPA, "SI-02SB:RF-P7Cav:WInT-Mon MSS CP")
-    field(INPB, "SI-02SB:RF-P7Cav:Disc7WT-Mon MSS")
-    field(DESC, "")
-    field(PREC, "4")
-    field(EGU,  "C")
-    field(LOLO, "0.3")
-    field(LLSV, "INVALID")
-}
-
-record(calc, "SI-02SB:RF-P7Cav:PwrDissDisc7-Mon"){
-    field(CALC, "1.16*A*B/1000")
-    field(INPA, "SI-02SB:RF-P7Cav:Disc7WdT-Mon MSS CP")   # Disc or cell delta T
-    field(INPB, "SI-02SB:RF-P7Cav:Disc7FlwRt-Mon MSS CP")
-    field(DESC, "")
-    field(PREC, "4")
-    field(EGU,  "kW")
-}
-
-record(ai, "SI-02SB:RF-P7Cav:Disc8FlwRt-Mon"){
-    field(DESC, "")
-    field(PREC, "4")
-    field(EGU,  "L/h")
-}
-
-record(calc, "SI-02SB:RF-P7Cav:Disc8WdT-Mon"){
-    field(CALC, "B-A")
-    field(INPA, "SI-02SB:RF-P7Cav:WInT-Mon MSS CP")
-    field(INPB, "SI-02SB:RF-P7Cav:Disc8WT-Mon MSS")
-    field(DESC, "")
-    field(PREC, "4")
-    field(EGU,  "C")
-    field(LOLO, "0.3")
-    field(LLSV, "INVALID")
-}
-
-record(calc, "SI-02SB:RF-P7Cav:PwrDissDisc8-Mon"){
-    field(CALC, "1.16*A*B/1000")
-    field(INPA, "SI-02SB:RF-P7Cav:Disc8WdT-Mon MSS CP")   # Disc or cell delta T
-    field(INPB, "SI-02SB:RF-P7Cav:Disc8FlwRt-Mon MSS CP")
-    field(DESC, "")
-    field(PREC, "4")
-    field(EGU,  "kW")
-}
-
-record(ai, "SI-02SB:RF-P7Cav:Cell1FlwRt-Mon"){
-    field(DESC, "")
-    field(PREC, "4")
-    field(EGU,  "L/h")
-}
-
-record(calc, "SI-02SB:RF-P7Cav:Cylin1WdT-Mon"){
-    field(CALC, "B-A")
-    field(INPA, "SI-02SB:RF-P7Cav:WInT-Mon MSS CP")
-    field(INPB, "SI-02SB:RF-P7Cav:Cylin1WT-Mon MSS")
-    field(DESC, "")
-    field(PREC, "4")
-    field(EGU,  "C")
-    field(LOLO, "0.3")
-    field(LLSV, "INVALID")
-}
-
-record(calc, "SI-02SB:RF-P7Cav:PwrDissCell1-Mon"){
-    field(CALC, "1.16*A*B/1000")
-    field(INPA, "SI-02SB:RF-P7Cav:Cylin1WdT-Mon MSS CP")   # Disc or cell delta T
-    field(INPB, "SI-02SB:RF-P7Cav:Cell1FlwRt-Mon MSS CP")
-    field(DESC, "")
-    field(PREC, "4")
-    field(EGU,  "kW")
-}
-
-record(ai, "SI-02SB:RF-P7Cav:Cell2FlwRt-Mon"){
-    field(DESC, "")
-    field(PREC, "4")
-    field(EGU,  "L/h")
-}
-
-record(calc, "SI-02SB:RF-P7Cav:Cylin2WdT-Mon"){
-    field(CALC, "B-A")
-    field(INPA, "SI-02SB:RF-P7Cav:WInT-Mon MSS CP")
-    field(INPB, "SI-02SB:RF-P7Cav:Cylin2WT-Mon MSS")
-    field(DESC, "")
-    field(PREC, "4")
-    field(EGU,  "C")
-    field(LOLO, "0.3")
-    field(LLSV, "INVALID")
-}
-
-record(calc, "SI-02SB:RF-P7Cav:PwrDissCell2-Mon"){
-    field(CALC, "1.16*A*B/1000")
-    field(INPA, "SI-02SB:RF-P7Cav:Cylin2WdT-Mon MSS CP")   # Disc or cell delta T
-    field(INPB, "SI-02SB:RF-P7Cav:Cell2FlwRt-Mon MSS CP")
-    field(DESC, "")
-    field(PREC, "4")
-    field(EGU,  "kW")
-}
-
-record(ai, "SI-02SB:RF-P7Cav:Cell3FlwRt-Mon"){
-    field(DESC, "")
-    field(PREC, "4")
-    field(EGU,  "L/h")
-}
-
-record(calc, "SI-02SB:RF-P7Cav:Cylin3WdT-Mon"){
-    field(CALC, "B-A")
-    field(INPA, "SI-02SB:RF-P7Cav:WInT-Mon MSS CP")
-    field(INPB, "SI-02SB:RF-P7Cav:Cylin3WT-Mon MSS")
-    field(DESC, "")
-    field(PREC, "4")
-    field(EGU,  "C")
-    field(LOLO, "0.3")
-    field(LLSV, "INVALID")
-}
-
-record(calc, "SI-02SB:RF-P7Cav:PwrDissCell3-Mon"){
-    field(CALC, "1.16*A*B/1000")
-    field(INPA, "SI-02SB:RF-P7Cav:Cylin3WdT-Mon MSS CP")   # Disc or cell delta T
-    field(INPB, "SI-02SB:RF-P7Cav:Cell3FlwRt-Mon MSS CP")
-    field(DESC, "")
-    field(PREC, "4")
-    field(EGU,  "kW")
-}
-
-record(ai, "SI-02SB:RF-P7Cav:Cell4FlwRt-Mon"){
-    field(DESC, "")
-    field(PREC, "4")
-    field(EGU,  "L/h")
-}
-
-record(calc, "SI-02SB:RF-P7Cav:Cylin4WdT-Mon"){
-    field(CALC, "B-A")
-    field(INPA, "SI-02SB:RF-P7Cav:WInT-Mon MSS CP")
-    field(INPB, "SI-02SB:RF-P7Cav:Cylin4WT-Mon MSS")
-    field(DESC, "")
-    field(PREC, "4")
-    field(EGU,  "C")
-    field(LOLO, "0.3")
-    field(LLSV, "INVALID")
-}
-
-record(calc, "SI-02SB:RF-P7Cav:PwrDissCell4-Mon"){
-    field(CALC, "1.16*A*B/1000")
-    field(INPA, "SI-02SB:RF-P7Cav:Cylin4WdT-Mon MSS CP")   # Disc or cell delta T
-    field(INPB, "SI-02SB:RF-P7Cav:Cell4FlwRt-Mon MSS CP")
-    field(DESC, "")
-    field(PREC, "4")
-    field(EGU,  "kW")
-}
-
-record(ai, "SI-02SB:RF-P7Cav:Cell5FlwRt-Mon"){
-    field(DESC, "")
-    field(PREC, "4")
-    field(EGU,  "L/h")
-}
-
-record(calc, "SI-02SB:RF-P7Cav:Cylin5WdT-Mon"){
-    field(CALC, "B-A")
-    field(INPA, "SI-02SB:RF-P7Cav:WInT-Mon MSS CP")
-    field(INPB, "SI-02SB:RF-P7Cav:Cylin5WT-Mon MSS")
-    field(DESC, "")
-    field(PREC, "4")
-    field(EGU,  "C")
-    field(LOLO, "0.3")
-    field(LLSV, "INVALID")
-}
-
-record(calc, "SI-02SB:RF-P7Cav:PwrDissCell5-Mon"){
-    field(CALC, "1.16*A*B/1000")
-    field(INPA, "SI-02SB:RF-P7Cav:Cylin5WdT-Mon MSS CP")   # Disc or cell delta T
-    field(INPB, "SI-02SB:RF-P7Cav:Cell5FlwRt-Mon MSS CP")
-    field(DESC, "")
-    field(PREC, "4")
-    field(EGU,  "kW")
-}
-
-record(ai, "SI-02SB:RF-P7Cav:Cell6FlwRt-Mon"){
-    field(DESC, "")
-    field(PREC, "4")
-    field(EGU,  "L/h")
-}
-
-record(calc, "SI-02SB:RF-P7Cav:Cylin6WdT-Mon"){
-    field(CALC, "B-A")
-    field(INPA, "SI-02SB:RF-P7Cav:WInT-Mon MSS CP")
-    field(INPB, "SI-02SB:RF-P7Cav:Cylin6WT-Mon MSS")
-    field(DESC, "")
-    field(PREC, "4")
-    field(EGU,  "C")
-    field(LOLO, "0.3")
-    field(LLSV, "INVALID")
-}
-
-record(calc, "SI-02SB:RF-P7Cav:PwrDissCell6-Mon"){
-    field(CALC, "1.16*A*B/1000")
-    field(INPA, "SI-02SB:RF-P7Cav:Cylin6WdT-Mon MSS CP")   # Disc or cell delta T
-    field(INPB, "SI-02SB:RF-P7Cav:Cell6FlwRt-Mon MSS CP")
-    field(DESC, "")
-    field(PREC, "4")
-    field(EGU,  "kW")
-}
-
-record(ai, "SI-02SB:RF-P7Cav:Cell7FlwRt-Mon"){
-    field(DESC, "")
-    field(PREC, "4")
-    field(EGU,  "L/h")
-}
-
-record(calc, "SI-02SB:RF-P7Cav:Cylin7WdT-Mon"){
-    field(CALC, "B-A")
-    field(INPA, "SI-02SB:RF-P7Cav:WInT-Mon MSS CP")
-    field(INPB, "SI-02SB:RF-P7Cav:Cylin7WT-Mon MSS")
-    field(DESC, "")
-    field(PREC, "4")
-    field(EGU,  "C")
-    field(LOLO, "0.3")
-    field(LLSV, "INVALID")
-}
-
-record(calc, "SI-02SB:RF-P7Cav:PwrDissCell7-Mon"){
-    field(CALC, "1.16*A*B/1000")
-    field(INPA, "SI-02SB:RF-P7Cav:Cylin7WdT-Mon MSS CP")   # Disc or cell delta T
-    field(INPB, "SI-02SB:RF-P7Cav:Cell7FlwRt-Mon MSS CP")
-    field(DESC, "")
-    field(PREC, "4")
-    field(EGU,  "kW")
-}
-
-record(calc, "SI-02SB:RF-P7Cav:PwrWtCell1-Mon_enbl"){
-    field(CALC, "A#0||B#0||C#0||D#0")
-    field(INPA, "SI-02SB:RF-P7Cav:PwrDissDisc1-Mon.STAT MSS CP")
-    field(INPB, "SI-02SB:RF-P7Cav:PwrDissCell1-Mon.STAT MSS CP")
-    field(INPC, "SI-02SB:RF-P7Cav:PwrDissDisc2-Mon.STAT MSS CP")
-    field(INPD, "SI-02SB:RF-P7Cav:PwrDissCell2-Mon.STAT MSS CP")
-    field(INPE, "SI-02SB:RF-P7Cav:PwrDissDisc1-Mon MSS CP")
-    field(INPF, "SI-02SB:RF-P7Cav:PwrDissCell1-Mon MSS CP")
-    field(INPG, "SI-02SB:RF-P7Cav:PwrDissDisc2-Mon MSS CP")
-    field(INPH, "SI-02SB:RF-P7Cav:PwrDissCell2-Mon MSS CP")
-}
-record(calc, "SI-02SB:RF-P7Cav:PwrWtCell1-Mon"){
-    field(CALC, "A+B+(C/(1+D/B))")
-    field(INPA, "SI-02SB:RF-P7Cav:PwrDissDisc1-Mon MSS CP")
-    field(INPB, "SI-02SB:RF-P7Cav:PwrDissCell1-Mon MSS CP")
-    field(INPC, "SI-02SB:RF-P7Cav:PwrDissDisc2-Mon MSS CP")
-    field(INPD, "SI-02SB:RF-P7Cav:PwrDissCell2-Mon MSS CP")
-    field(PREC, "4")
-    field(EGU, "kW")
-    field(DISV, "1")
-    field(DISS, "INVALID")
-    field(SDIS, "SI-02SB:RF-P7Cav:PwrWtCell1-Mon_enbl")
-}
-
-record(calc, "SI-02SB:RF-P7Cav:PwrWtCell2-Mon_enbl"){
-    field(CALC, "A#0||B#0||C#0||D#0||E#0")
-    field(INPA, "SI-02SB:RF-P7Cav:PwrDissDisc2-Mon.STAT   MSS CP")
-    field(INPB, "SI-02SB:RF-P7Cav:PwrDissDisc3-Mon.STAT MSS CP")
-    field(INPC, "SI-02SB:RF-P7Cav:PwrDissCell2-Mon.STAT   MSS CP")
-    field(INPD, "SI-02SB:RF-P7Cav:PwrDissCell1-Mon.STAT MSS CP")
-    field(INPE, "SI-02SB:RF-P7Cav:PwrDissCell3-Mon.STAT MSS CP")
-    field(INPF, "SI-02SB:RF-P7Cav:PwrDissDisc2-Mon   MSS CP")
-    field(INPG, "SI-02SB:RF-P7Cav:PwrDissDisc3-Mon MSS CP")
-    field(INPH, "SI-02SB:RF-P7Cav:PwrDissCell2-Mon   MSS CP")
-    field(INPI, "SI-02SB:RF-P7Cav:PwrDissCell1-Mon MSS CP")
-    field(INPJ, "SI-02SB:RF-P7Cav:PwrDissCell3-Mon MSS CP")
-}
-record(calc, "SI-02SB:RF-P7Cav:PwrWtCell2-Mon"){
-    field(CALC, "A/(1+(D/C))+C+B/(1+(E/C))")
-    field(INPA, "SI-02SB:RF-P7Cav:PwrDissDisc2-Mon   MSS CP")
-    field(INPB, "SI-02SB:RF-P7Cav:PwrDissDisc3-Mon MSS CP")
-    field(INPC, "SI-02SB:RF-P7Cav:PwrDissCell2-Mon   MSS CP")
-    field(INPD, "SI-02SB:RF-P7Cav:PwrDissCell1-Mon MSS CP")
-    field(INPE, "SI-02SB:RF-P7Cav:PwrDissCell3-Mon MSS CP")
-    field(PREC, "4")
-    field(EGU, "kW")
-    field(DISV, "1")
-    field(DISS, "INVALID")
-    field(SDIS, "SI-02SB:RF-P7Cav:PwrWtCell2-Mon_enbl")
-}
-
-record(calc, "SI-02SB:RF-P7Cav:PwrWtCell3-Mon_enbl"){
-    field(CALC, "A#0||B#0||C#0||D#0||E#0")
-    field(INPA, "SI-02SB:RF-P7Cav:PwrDissDisc3-Mon.STAT   MSS CP")
-    field(INPB, "SI-02SB:RF-P7Cav:PwrDissDisc4-Mon.STAT MSS CP")
-    field(INPC, "SI-02SB:RF-P7Cav:PwrDissCell3-Mon.STAT   MSS CP")
-    field(INPD, "SI-02SB:RF-P7Cav:PwrDissCell2-Mon.STAT MSS CP")
-    field(INPE, "SI-02SB:RF-P7Cav:PwrDissCell4-Mon.STAT MSS CP")
-    field(INPF, "SI-02SB:RF-P7Cav:PwrDissDisc3-Mon   MSS CP")
-    field(INPG, "SI-02SB:RF-P7Cav:PwrDissDisc4-Mon MSS CP")
-    field(INPH, "SI-02SB:RF-P7Cav:PwrDissCell3-Mon   MSS CP")
-    field(INPI, "SI-02SB:RF-P7Cav:PwrDissCell2-Mon MSS CP")
-    field(INPJ, "SI-02SB:RF-P7Cav:PwrDissCell4-Mon MSS CP")
-}
-record(calc, "SI-02SB:RF-P7Cav:PwrWtCell3-Mon"){
-    field(CALC, "A/(1+(D/C))+C+B/(1+(E/C))")
-    field(INPA, "SI-02SB:RF-P7Cav:PwrDissDisc3-Mon   MSS CP")
-    field(INPB, "SI-02SB:RF-P7Cav:PwrDissDisc4-Mon MSS CP")
-    field(INPC, "SI-02SB:RF-P7Cav:PwrDissCell3-Mon   MSS CP")
-    field(INPD, "SI-02SB:RF-P7Cav:PwrDissCell2-Mon MSS CP")
-    field(INPE, "SI-02SB:RF-P7Cav:PwrDissCell4-Mon MSS CP")
-    field(PREC, "4")
-    field(EGU, "kW")
-    field(DISV, "1")
-    field(DISS, "INVALID")
-    field(SDIS, "SI-02SB:RF-P7Cav:PwrWtCell3-Mon_enbl")
-}
-
-record(calc, "SI-02SB:RF-P7Cav:PwrWtCell4-Mon_enbl"){
-    field(CALC, "A#0||B#0||C#0||D#0||E#0")
-    field(INPA, "SI-02SB:RF-P7Cav:PwrDissDisc4-Mon.STAT   MSS CP")
-    field(INPB, "SI-02SB:RF-P7Cav:PwrDissDisc5-Mon.STAT MSS CP")
-    field(INPC, "SI-02SB:RF-P7Cav:PwrDissCell4-Mon.STAT   MSS CP")
-    field(INPD, "SI-02SB:RF-P7Cav:PwrDissCell3-Mon.STAT MSS CP")
-    field(INPE, "SI-02SB:RF-P7Cav:PwrDissCell5-Mon.STAT MSS CP")
-    field(INPF, "SI-02SB:RF-P7Cav:PwrDissDisc4-Mon   MSS CP")
-    field(INPG, "SI-02SB:RF-P7Cav:PwrDissDisc5-Mon MSS CP")
-    field(INPH, "SI-02SB:RF-P7Cav:PwrDissCell4-Mon   MSS CP")
-    field(INPI, "SI-02SB:RF-P7Cav:PwrDissCell3-Mon MSS CP")
-    field(INPJ, "SI-02SB:RF-P7Cav:PwrDissCell5-Mon MSS CP")
-}
-record(calc, "SI-02SB:RF-P7Cav:PwrWtCell4-Mon"){
-    field(CALC, "A/(1+(D/C))+C+B/(1+(E/C))")
-    field(INPA, "SI-02SB:RF-P7Cav:PwrDissDisc4-Mon   MSS CP")
-    field(INPB, "SI-02SB:RF-P7Cav:PwrDissDisc5-Mon MSS CP")
-    field(INPC, "SI-02SB:RF-P7Cav:PwrDissCell4-Mon   MSS CP")
-    field(INPD, "SI-02SB:RF-P7Cav:PwrDissCell3-Mon MSS CP")
-    field(INPE, "SI-02SB:RF-P7Cav:PwrDissCell5-Mon MSS CP")
-    field(PREC, "4")
-    field(EGU, "kW")
-    field(DISV, "1")
-    field(DISS, "INVALID")
-    field(SDIS, "SI-02SB:RF-P7Cav:PwrWtCell4-Mon_enbl")
-}
-
-record(calc, "SI-02SB:RF-P7Cav:PwrWtCell5-Mon_enbl"){
-    field(CALC, "A#0||B#0||C#0||D#0||E#0")
-    field(INPA, "SI-02SB:RF-P7Cav:PwrDissDisc5-Mon.STAT   MSS CP")
-    field(INPB, "SI-02SB:RF-P7Cav:PwrDissDisc6-Mon.STAT MSS CP")
-    field(INPC, "SI-02SB:RF-P7Cav:PwrDissCell5-Mon.STAT   MSS CP")
-    field(INPD, "SI-02SB:RF-P7Cav:PwrDissCell4-Mon.STAT MSS CP")
-    field(INPE, "SI-02SB:RF-P7Cav:PwrDissCell6-Mon.STAT MSS CP")
-    field(INPF, "SI-02SB:RF-P7Cav:PwrDissDisc5-Mon   MSS CP")
-    field(INPG, "SI-02SB:RF-P7Cav:PwrDissDisc6-Mon MSS CP")
-    field(INPH, "SI-02SB:RF-P7Cav:PwrDissCell5-Mon   MSS CP")
-    field(INPI, "SI-02SB:RF-P7Cav:PwrDissCell4-Mon MSS CP")
-    field(INPJ, "SI-02SB:RF-P7Cav:PwrDissCell6-Mon MSS CP")
-}
-record(calc, "SI-02SB:RF-P7Cav:PwrWtCell5-Mon"){
-    field(CALC, "A/(1+(D/C))+C+B/(1+(E/C))")
-    field(INPA, "SI-02SB:RF-P7Cav:PwrDissDisc5-Mon   MSS CP")
-    field(INPB, "SI-02SB:RF-P7Cav:PwrDissDisc6-Mon MSS CP")
-    field(INPC, "SI-02SB:RF-P7Cav:PwrDissCell5-Mon   MSS CP")
-    field(INPD, "SI-02SB:RF-P7Cav:PwrDissCell4-Mon MSS CP")
-    field(INPE, "SI-02SB:RF-P7Cav:PwrDissCell6-Mon MSS CP")
-    field(PREC, "4")
-    field(EGU, "kW")
-    field(DISV, "1")
-    field(DISS, "INVALID")
-    field(SDIS, "SI-02SB:RF-P7Cav:PwrWtCell5-Mon_enbl")
-}
-
-record(calc, "SI-02SB:RF-P7Cav:PwrWtCell6-Mon_enbl"){
-    field(CALC, "A#0||B#0||C#0||D#0||E#0")
-    field(INPA, "SI-02SB:RF-P7Cav:PwrDissDisc6-Mon.STAT   MSS CP")
-    field(INPB, "SI-02SB:RF-P7Cav:PwrDissDisc7-Mon.STAT MSS CP")
-    field(INPC, "SI-02SB:RF-P7Cav:PwrDissCell6-Mon.STAT   MSS CP")
-    field(INPD, "SI-02SB:RF-P7Cav:PwrDissCell5-Mon.STAT MSS CP")
-    field(INPE, "SI-02SB:RF-P7Cav:PwrDissCell7-Mon.STAT MSS CP")
-    field(INPF, "SI-02SB:RF-P7Cav:PwrDissDisc6-Mon   MSS CP")
-    field(INPG, "SI-02SB:RF-P7Cav:PwrDissDisc7-Mon MSS CP")
-    field(INPH, "SI-02SB:RF-P7Cav:PwrDissCell6-Mon   MSS CP")
-    field(INPI, "SI-02SB:RF-P7Cav:PwrDissCell5-Mon MSS CP")
-    field(INPJ, "SI-02SB:RF-P7Cav:PwrDissCell7-Mon MSS CP")
-}
-record(calc, "SI-02SB:RF-P7Cav:PwrWtCell6-Mon"){
-    field(CALC, "A/(1+(D/C))+C+B/(1+(E/C))")
-    field(INPA, "SI-02SB:RF-P7Cav:PwrDissDisc6-Mon   MSS CP")
-    field(INPB, "SI-02SB:RF-P7Cav:PwrDissDisc7-Mon MSS CP")
-    field(INPC, "SI-02SB:RF-P7Cav:PwrDissCell6-Mon   MSS CP")
-    field(INPD, "SI-02SB:RF-P7Cav:PwrDissCell5-Mon MSS CP")
-    field(INPE, "SI-02SB:RF-P7Cav:PwrDissCell7-Mon MSS CP")
-    field(PREC, "4")
-    field(EGU, "kW")
-    field(DISV, "1")
-    field(DISS, "INVALID")
-    field(SDIS, "SI-02SB:RF-P7Cav:PwrWtCell6-Mon_enbl")
-}
-
-record(calc, "SI-02SB:RF-P7Cav:PwrWtCell7-Mon_enbl"){
-    field(CALC, "A#0||B#0||C#0||D#0")
-    field(INPA, "SI-02SB:RF-P7Cav:PwrDissDisc8-Mon.STAT MSS CP")
-    field(INPB, "SI-02SB:RF-P7Cav:PwrDissDisc7-Mon.STAT MSS CP")
-    field(INPC, "SI-02SB:RF-P7Cav:PwrDissCell7-Mon.STAT MSS CP")
-    field(INPD, "SI-02SB:RF-P7Cav:PwrDissCell6-Mon.STAT MSS CP")
-    field(INPE, "SI-02SB:RF-P7Cav:PwrDissDisc8-Mon MSS CP")
-    field(INPF, "SI-02SB:RF-P7Cav:PwrDissDisc7-Mon MSS CP")
-    field(INPG, "SI-02SB:RF-P7Cav:PwrDissCell7-Mon MSS CP")
-    field(INPH, "SI-02SB:RF-P7Cav:PwrDissCell6-Mon MSS CP")
-}
-record(calc, "SI-02SB:RF-P7Cav:PwrWtCell7-Mon"){
-    field(CALC, "C + A + (B/(1+D/C))")
-    field(INPA, "SI-02SB:RF-P7Cav:PwrDissDisc8-Mon MSS CP")
-    field(INPB, "SI-02SB:RF-P7Cav:PwrDissDisc7-Mon MSS CP")
-    field(INPC, "SI-02SB:RF-P7Cav:PwrDissCell7-Mon MSS CP")
-    field(INPD, "SI-02SB:RF-P7Cav:PwrDissCell6-Mon MSS CP")
-    field(PREC, "4")
-    field(EGU, "kW")
-    field(DISV, "1")
-    field(DISS, "INVALID")
-    field(SDIS, "SI-02SB:RF-P7Cav:PwrWtCell7-Mon_enbl")
-}
-
-record(calc, "SI-02SB:RF-P7Cav:PwrWtTotal-Mon"){
-    field(CALC, "A+B+C+D+E+F+G")
-    field(INPA, "SI-02SB:RF-P7Cav:PwrWtCell1-Mon MSS CP")
-    field(INPB, "SI-02SB:RF-P7Cav:PwrWtCell2-Mon MSS CP")
-    field(INPC, "SI-02SB:RF-P7Cav:PwrWtCell3-Mon MSS CP")
-    field(INPD, "SI-02SB:RF-P7Cav:PwrWtCell4-Mon MSS CP")
-    field(INPE, "SI-02SB:RF-P7Cav:PwrWtCell5-Mon MSS CP")
-    field(INPF, "SI-02SB:RF-P7Cav:PwrWtCell6-Mon MSS CP")
-    field(INPG, "SI-02SB:RF-P7Cav:PwrWtCell7-Mon MSS CP")
-    field(PREC, "4")
-    field(EGU,  "kW")
-}
-record(calc, "SI-02SB:RF-P7Cav:PwrWtTotaldBm-Mon"){
-    field(CALC, "10*LOG(A*10^6)")
-    field(INPA, "SI-02SB:RF-P7Cav:PwrWtTotal-Mon MSS CP")
-    field(PREC, "4")
-    field(EGU,  "kW")
-}
-
-record(calc, "SI-02SB:RF-P7Cav:VrCell1-Mon"){
-    field(CALC, "100*(A/(B/7))^(1/2)")
-    field(INPA, "SI-02SB:RF-P7Cav:PwrWtCell1-Mon MSS CP")
-    field(INPB, "SI-02SB:RF-P7Cav:PwrWtTotal-Mon MSS CP")
-    field(PREC, "4")
-    field(EGU,  "%")
-}
-
-record(calc, "SI-02SB:RF-P7Cav:VrCell2-Mon"){
-    field(CALC, "100*(A/(B/7))^(1/2)")
-    field(INPA, "SI-02SB:RF-P7Cav:PwrWtCell2-Mon MSS CP")
-    field(INPB, "SI-02SB:RF-P7Cav:PwrWtTotal-Mon MSS CP")
-    field(PREC, "4")
-    field(EGU,  "%")
-}
-
-record(calc, "SI-02SB:RF-P7Cav:VrCell3-Mon"){
-    field(CALC, "100*(A/(B/7))^(1/2)")
-    field(INPA, "SI-02SB:RF-P7Cav:PwrWtCell3-Mon MSS CP")
-    field(INPB, "SI-02SB:RF-P7Cav:PwrWtTotal-Mon MSS CP")
-    field(PREC, "4")
-    field(EGU,  "%")
-}
-
-record(calc, "SI-02SB:RF-P7Cav:VrCell4-Mon"){
-    field(CALC, "100*(A/(B/7))^(1/2)")
-    field(INPA, "SI-02SB:RF-P7Cav:PwrWtCell4-Mon MSS CP")
-    field(INPB, "SI-02SB:RF-P7Cav:PwrWtTotal-Mon MSS CP")
-    field(PREC, "4")
-    field(EGU,  "%")
-}
-
-record(calc, "SI-02SB:RF-P7Cav:VrCell5-Mon"){
-    field(CALC, "100*(A/(B/7))^(1/2)")
-    field(INPA, "SI-02SB:RF-P7Cav:PwrWtCell5-Mon MSS CP")
-    field(INPB, "SI-02SB:RF-P7Cav:PwrWtTotal-Mon MSS CP")
-    field(PREC, "4")
-    field(EGU,  "%")
-}
-
-record(calc, "SI-02SB:RF-P7Cav:VrCell6-Mon"){
-    field(CALC, "100*(A/(B/7))^(1/2)")
-    field(INPA, "SI-02SB:RF-P7Cav:PwrWtCell6-Mon MSS CP")
-    field(INPB, "SI-02SB:RF-P7Cav:PwrWtTotal-Mon MSS CP")
-    field(PREC, "4")
-    field(EGU,  "%")
-}
-
-record(calc, "SI-02SB:RF-P7Cav:VrCell7-Mon"){
-    field(CALC, "100*(A/(B/7))^(1/2)")
-    field(INPA, "SI-02SB:RF-P7Cav:PwrWtCell7-Mon MSS CP")
-    field(INPB, "SI-02SB:RF-P7Cav:PwrWtTotal-Mon MSS CP")
-    field(PREC, "4")
-    field(EGU,  "%")
-}
