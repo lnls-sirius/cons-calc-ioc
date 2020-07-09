@@ -13,7 +13,6 @@ include $(TOP)/configure/CONFIG
 #DB += xxx.db
 
 DB += Calc.db
-DB += Security.as
 
 #----------------------------------------------------
 # If <anyname>.db template is not named <anyname>*.template add
