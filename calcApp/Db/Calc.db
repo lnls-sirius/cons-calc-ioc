@@ -33,9 +33,10 @@ record(calc, "$(P):BO_PR_2"){
     field(INPJ, "BO-49U:VA-CCG-BG:Pressure-Mon MSS CP")
 }
     
-record(calc, "$(P):BO:VA-CCG:Pressure-Mon"){
+record(calc, "$(P):VA-CCG-BO-Avg:Pressure-Mon"){
     field(CALC, "(A+B)/2.")
     field(EGU, "mBar")
+    field(DESC, "CCG Average Pressure per Sector")
 
     field(INPA, "$(P):BO_PR_1 CP MSS")
     field(INPB, "$(P):BO_PR_2 CP MSS")
@@ -134,9 +135,10 @@ record(calc, "$(P):SI_PR_6"){
     field(INPA, "SI-20SB:VA-CCG-BG:Pressure-Mon MSS CP")
 }
 
-record(calc, "$(P):SI:VA-CCG-BG:Pressure-Mon"){
+record(calc, "$(P):VA-CCG-SI-Avg:Pressure-Mon"){
     field(CALC, "(A+B+C+D+E+F)/6.")
     field(EGU, "mBar")
+    field(DESC, "CCG Average Pressure per Sector")
 
     field(INPA, "$(P):SI_PR_1 CP MSS")
     field(INPB, "$(P):SI_PR_2 CP MSS")
@@ -165,7 +167,7 @@ record(calc, "$(P):FE_PR_1"){
     field(INPL, "SI-05C2FE:VA-CCG-MD:Pressure-Mon MSS CP")
 }
 
-record(calc, "$(P):FE_PR_3"){
+record(calc, "$(P):FE_PR_2"){
     field(CALC, "(A+B+C+D+E+F+G+H+I+J+K+L)/12.")
     field(EGU, "mBar")
 
@@ -183,7 +185,7 @@ record(calc, "$(P):FE_PR_3"){
     field(INPL, "SI-10BCFE:VA-CCG-MD:Pressure-Mon MSS CP")
 }
 
-record(calc, "$(P):FE_PR_4"){
+record(calc, "$(P):FE_PR_3"){
     field(CALC, "(A+B+C+D+E+F+G+H+I+J+K+L)/12.")
     field(EGU, "mBar")
 
@@ -201,7 +203,7 @@ record(calc, "$(P):FE_PR_4"){
     field(INPL, "SI-15BCFE:VA-CCG-MD:Pressure-Mon MSS CP")
 }
 
-record(calc, "$(P):FE_PR_5"){
+record(calc, "$(P):FE_PR_4"){
     field(CALC, "(A+B+C+D+E+F+G+H+I+J+K+L)/12.")
     field(EGU, "mBar")
 
@@ -219,7 +221,7 @@ record(calc, "$(P):FE_PR_5"){
     field(INPL, "SI-19SPFE:VA-CCG-MD:Pressure-Mon MSS CP")
 }
 
-record(calc, "$(P):FE_PR_6"){
+record(calc, "$(P):FE_PR_5"){
     field(CALC, "(A+B)/2.")
     field(EGU, "mBar")
 
@@ -227,31 +229,33 @@ record(calc, "$(P):FE_PR_6"){
     field(INPB, "SI-20SBFE:VA-CCG-MD:Pressure-Mon MSS CP")
 }
 
-record(calc, "$(P):FE:VA-CCG:Pressure-Mon"){
-    field(CALC, "(A+B+C+D+E+F)/6.")
+record(calc, "$(P):VA-CCG-FE-Avg:Pressure-Mon"){
+    field(CALC, "(A+B+C+D+E)/5.")
     field(EGU, "mBar")
+    field(DESC, "CCG Average Pressure per Sector")
 
     field(INPA, "$(P):FE_PR_1 CP MSS")
     field(INPB, "$(P):FE_PR_2 CP MSS")
     field(INPC, "$(P):FE_PR_3 CP MSS")
     field(INPD, "$(P):FE_PR_4 CP MSS")
     field(INPE, "$(P):FE_PR_5 CP MSS")
-    field(INPF, "$(P):FE_PR_6 CP MSS")
 }
               
 # --------------------- TB ----------------------------
-record(calc, "$(P):TB:VA-CCG:Pressure-Mon"){
+record(calc, "$(P):VA-CCG-TB-Avg:Pressure-Mon"){
     field(CALC, "(A+B)/2.")
     field(EGU, "mBar")
+    field(DESC, "CCG Average Pressure per Sector")
 
     field(INPA, "STB-01:VA-CCG-ED:Pressure-Mon MSS CP")
     field(INPB, "STB-04:VA-CCG-ED:Pressure-Mon MSS CP")
 }
 
 # --------------------- TS ----------------------------
-record(calc, "$(P):TS:VA-CCG:Pressure-Mon"){
+record(calc, "$(P):VA-CCG-TS-Avg:Pressure-Mon"){
     field(CALC, "(A+B+C+D)/4.")
     field(EGU, "mBar")
+    field(DESC, "CCG Average Pressure per Sector")
 
     field(INPA, "STS-01:VA-CCG-BG:Pressure-Mon MSS CP")
     field(INPB, "STS-01:VA-CCG-ED:Pressure-Mon MSS CP")
