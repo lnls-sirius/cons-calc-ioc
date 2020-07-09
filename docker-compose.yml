@@ -2,7 +2,7 @@ version: "3.7"
 services:
     cons-calc-ioc: 
         build: .
-        image: lnlscon/cons-calc-ioc:v1.0
+        image: lnlscon/cons-calc-ioc:v1.1
         environment:
             - PROCSERV_PORT=20200
 

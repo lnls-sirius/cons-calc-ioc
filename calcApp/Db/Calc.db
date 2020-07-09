@@ -247,8 +247,8 @@ record(calc, "$(P):VA-CCG-TB-Avg:Pressure-Mon"){
     field(EGU, "mBar")
     field(DESC, "CCG Average Pressure per Sector")
 
-    field(INPA, "STB-01:VA-CCG-ED:Pressure-Mon MSS CP")
-    field(INPB, "STB-04:VA-CCG-ED:Pressure-Mon MSS CP")
+    field(INPA, "TB-01:VA-CCG-ED:Pressure-Mon MSS CP")
+    field(INPB, "TB-04:VA-CCG-ED:Pressure-Mon MSS CP")
 }
 
 # --------------------- TS ----------------------------
@@ -257,9 +257,9 @@ record(calc, "$(P):VA-CCG-TS-Avg:Pressure-Mon"){
     field(EGU, "mBar")
     field(DESC, "CCG Average Pressure per Sector")
 
-    field(INPA, "STS-01:VA-CCG-BG:Pressure-Mon MSS CP")
-    field(INPB, "STS-01:VA-CCG-ED:Pressure-Mon MSS CP")
-    field(INPC, "STS-04:VA-CCG-BG:Pressure-Mon MSS CP")
-    field(INPD, "STS-04:VA-CCG-MD:Pressure-Mon MSS CP")
+    field(INPA, "TS-01:VA-CCG-BG:Pressure-Mon MSS CP")
+    field(INPB, "TS-01:VA-CCG-ED:Pressure-Mon MSS CP")
+    field(INPC, "TS-04:VA-CCG-BG:Pressure-Mon MSS CP")
+    field(INPD, "TS-04:VA-CCG-MD:Pressure-Mon MSS CP")
 }
              
