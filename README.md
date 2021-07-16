@@ -1,2 +1,2 @@
-# CONS Calculation IOC
-Generic calculations
+# sirius-avg-vac
+Average vacuum measurements
