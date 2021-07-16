@@ -1,8 +1,19 @@
 version: "3.7"
-services:
-    cons-calc-ioc: 
-        build: .
-        image: lnlscon/cons-calc-ioc:v1.1
-        environment:
-            - PROCSERV_PORT=20200
+x-environment:
+  &default-labels
+  br.com.lnls-sirius.department: ${DEPARTMENT}
+  org.opencontainers.image.authors: ${AUTHOR}
+  org.opencontainers.image.created: ${BUILD_DATE_RFC339}
+  org.opencontainers.image.licenses: ${LICENSE}
+  org.opencontainers.image.revision: ${COMMIT_HASH}
+  org.opencontainers.image.source: ${REPOSITORY}
+  org.opencontainers.image.url: ${REPOSITORY}
+  org.opencontainers.image.vendor: ${VENDOR}
 
+services:
+  ioc:
+    image: dockerregistry.lnls-sirius.com.br/gas/sirius-vac-avg:${COMMIT_HASH}-${BUILD_DATE}
+    build:
+      context: .
+      labels:
+        org.opencontainers.image.version: ${COMMIT_HASH}-${BUILD_DATE}

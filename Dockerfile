@@ -2,10 +2,10 @@
 # LNLS - Brazilian Synchrotron Light Source Laboratory
 
 FROM  lnlscon/epics-r3.15.8:v1.0
-LABEL maintainer="Claudio Carneiro <claudio.carneiro@lnls.br>"
-
-# VIM
-RUN apt-get -y update && apt-get -y install procps vim
+ARG APT_PROXY_SERVER=TA-TiRack-CO-FWSrv-1.abtlus.org.br:3142
+RUN set -x; \
+    echo "Acquire::http { Proxy \"http://${APT_PROXY_SERVER}\"; }" > /etc/apt/apt.conf.d/proxy ;\
+    apt-get -y update && apt-get -y install procps vim socat
 
 # Epics auto addr list
 ENV EPICS_CA_AUTO_ADDR_LIST YES
