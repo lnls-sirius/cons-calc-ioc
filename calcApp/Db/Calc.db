@@ -133,6 +133,7 @@ record(calc, "$(P):SI_PR_6"){
     field(CALC, "A")
     field(EGU, "mBar")
     field(INPA, "SI-20SB:VA-CCG-BG:Pressure-Mon MSS CP")
+    field(INPB, "SI-16SB:VA-CCG-ED:Pressure-Mon MMS CP")
 }
 
 record(calc, "$(P):VA-CCG-SI-Avg:Pressure-Mon"){
