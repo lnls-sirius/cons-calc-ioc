@@ -130,7 +130,7 @@ record(calc, "$(P):SI_PR_5"){
 }
 
 record(calc, "$(P):SI_PR_6"){
-    field(CALC, "A")
+    field(CALC, "(A+B)/2")
     field(EGU, "mBar")
     field(INPA, "SI-20SB:VA-CCG-BG:Pressure-Mon MSS CP")
     field(INPB, "SI-16SB:VA-CCG-ED:Pressure-Mon MMS CP")
