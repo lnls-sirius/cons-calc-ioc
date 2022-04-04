@@ -44,7 +44,7 @@ record(calc, "$(P):VA-CCG-BO-Avg:Pressure-Mon"){
 
 # --------------------- SI ----------------------------
 record(calc, "$(P):SI_PR_1"){
-    field(CALC, "(A+B+C+D+E+F+G+H+I+J+K+L)/12.")
+    field(CALC, "A+B+C+D+E+F+G+H+I+J+K+L")
     field(EGU, "mBar")
 
     field(INPA, "SI-01C1:VA-CCG-BG:Pressure-Mon MSS CP")
@@ -62,7 +62,7 @@ record(calc, "$(P):SI_PR_1"){
 }
 
 record(calc, "$(P):SI_PR_2"){
-    field(CALC, "(A+B+C+D+E+F+G+H+I+J+K+L)/12.")
+    field(CALC, "A+B+C+D+E+F+G+H+I+J+K+L")
     field(EGU, "mBar")
     field(INPA, "SI-04SB:VA-CCG-BG:Pressure-Mon MSS CP")
     field(INPB, "SI-05C1:VA-CCG-BG:Pressure-Mon MSS CP")
@@ -79,7 +79,7 @@ record(calc, "$(P):SI_PR_2"){
 }
 
 record(calc, "$(P):SI_PR_3"){
-    field(CALC, "(A+B+C+D+E+F+G+H+I+J+K+L)/12.")
+    field(CALC, "A+B+C+D+E+F+G+H+I+J+K+L")
     field(EGU, "mBar")
     field(INPA, "SI-08SB:VA-CCG-BG:Pressure-Mon MSS CP")
     field(INPB, "SI-09C1:VA-CCG-BG:Pressure-Mon MSS CP")
@@ -96,7 +96,7 @@ record(calc, "$(P):SI_PR_3"){
 }
 
 record(calc, "$(P):SI_PR_4"){
-    field(CALC, "(A+B+C+D+E+F+G+H+I+J+K+L)/12.")
+    field(CALC, "A+B+C+D+E+F+G+H+I+J+K+L")
     field(EGU, "mBar")
     field(INPA, "SI-12SB:VA-CCG-BG:Pressure-Mon MSS CP")
     field(INPB, "SI-13C1:VA-CCG-BG:Pressure-Mon MSS CP")
@@ -113,7 +113,7 @@ record(calc, "$(P):SI_PR_4"){
 }
 
 record(calc, "$(P):SI_PR_5"){
-    field(CALC, "(A+B+C+D+E+F+G+H+I+J+K+L)/12.")
+    field(CALC, "A+B+C+D+E+F+G+H+I+J+K+L")
     field(EGU, "mBar")
     field(INPA, "SI-16SB:VA-CCG-BG:Pressure-Mon MSS CP")
     field(INPB, "SI-17C1:VA-CCG-BG:Pressure-Mon MSS CP")
@@ -130,14 +130,14 @@ record(calc, "$(P):SI_PR_5"){
 }
 
 record(calc, "$(P):SI_PR_6"){
-    field(CALC, "(A+B)/2")
+    field(CALC, "A+B")
     field(EGU, "mBar")
     field(INPA, "SI-20SB:VA-CCG-BG:Pressure-Mon MSS CP")
     field(INPB, "SI-16SB:VA-CCG-ED:Pressure-Mon MMS CP")
 }
 
 record(calc, "$(P):VA-CCG-SI-Avg:Pressure-Mon"){
-    field(CALC, "(A+B+C+D+E+F)/6.")
+    field(CALC, "(A+B+C+D+E+F)/62.")
     field(EGU, "mBar")
     field(DESC, "CCG Average Pressure per Sector")
 
