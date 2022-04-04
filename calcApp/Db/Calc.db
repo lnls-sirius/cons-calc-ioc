@@ -223,7 +223,7 @@ record(calc, "$(P):FE_PR_4"){
 }
 
 record(calc, "$(P):FE_PR_5"){
-    field(CALC, "(A+B)/50.")
+    field(CALC, "(A+B)/48.")
     field(EGU, "mBar")
 
     field(INPA, "SI-20BCFE:VA-CCG-MD:Pressure-Mon MSS CP")
