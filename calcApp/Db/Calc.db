@@ -231,7 +231,7 @@ record(calc, "$(P):FE_PR_5"){
 }
 
 record(calc, "$(P):VA-CCG-FE-Avg:Pressure-Mon"){
-    field(CALC, "(A+B+C+D+E)/5.")
+    field(CALC, "(A+B+C+D+E)/50.")
     field(EGU, "mBar")
     field(DESC, "CCG Average Pressure per Sector")
 
